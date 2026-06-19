@@ -1,6 +1,6 @@
 # TODO
 
-> 項目層級待辦（跨版本、結構／共用碼／基礎建設）。版本層級的待辦見 `src/<version>/TODO.md`。
-> 用 `[ ]` 排列，並記錄時間戳。
+> Project-level TODO (cross-version, structure / shared-code / infrastructure). For version-level TODOs, see `src/<version>/TODO.md`.
+> Use `[ ]` items, and record timestamps.
 
-- [ ] （待辦項目，含時間戳）
+- [ ] (TODO item, with timestamp)

@@ -1,5 +1,5 @@
 # TODO — v1_baseline
 
-> 本版本（`src/v1_baseline`）的待辦事項。用 `[ ]` 排列，並記錄時間戳。
+> TODO list for this version (`src/v1_baseline`). Use `[ ]` items, and record timestamps.
 
-- [ ] （待辦項目，含時間戳）
+- [ ] (TODO item, with timestamp)

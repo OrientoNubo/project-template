@@ -1,4 +1,4 @@
-# ===== 系統／工具雜項 =====
+# ===== System / tooling misc =====
 .DS_Store
 Thumbs.db
 __pycache__/
@@ -9,20 +9,20 @@ venv/
 *.egg-info/
 .env
 
-# ===== 非追蹤目錄：忽略內容，僅保留目錄骨架（.gitkeep）=====
+# ===== Untracked dirs: ignore contents, keep only the directory skeleton (.gitkeep) =====
 
-# repos/ — 外部 clone 的 codebase
+# repos/ — externally cloned codebases
 repos/*
 !repos/.gitkeep
 
-# weights/ — 模型權重
+# weights/ — model weights
 weights/*
 !weights/.gitkeep
 !weights/ours/
 weights/ours/*
 !weights/ours/.gitkeep
 
-# data/ — 資料（datasets 為機器本地 symlink，不追蹤）
+# data/ — data (datasets is a machine-local symlink, not tracked)
 data/*
 !data/.gitkeep
 !data/scripts/
@@ -32,10 +32,10 @@ data/scripts/*
 data/testdata/*
 !data/testdata/.gitkeep
 
-# _tmp/ — 臨時輸出
+# _tmp/ — temporary output
 _tmp/*
 !_tmp/.gitkeep
 
-# _bak/ — 備份壓縮包
+# _bak/ — backup archives
 _bak/*
 !_bak/.gitkeep
