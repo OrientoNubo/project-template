@@ -48,7 +48,7 @@ project_root/
 
 ## Important Rules
 
-- **`src/` multi-version coexistence**: each development version uses a subdirectory `vN_<brief>` (e.g. `v1_baseline`, `v2_crossattn`), never overwriting one another; shared code goes in `src/_shared/` and is imported, only forking the parts that actually change. Tie related artifacts together with the same version key: `weights/ours/<version>/`, `configs/<version>.yaml`, `docs/reports/<version>.md`. The currently active version is designated by the `src/current` symlink (see section above).
+- **`src/` multi-version coexistence**: each development version uses a subdirectory `vN_<brief>` (e.g. `v1_baseline`, `v2_crossattn`), never overwriting one another; The versions are isolated from each other and operate independently. Tie related artifacts together with the same version key: `weights/ours/<version>/`, `configs/<version>.yaml`, `docs/reports/<version>.md`. The currently active version is designated by the `src/current` symlink (see section above).
 - **`repos/`**: logically read-only. Adjustments to paths / environment / dependencies for "getting it to run" are allowed, but their run logic and method architecture must not be modified; if modification is unavoidable, confirm first and back up. Each external project uses its own subdirectory (`repos/AAA`).
 - **`weights/`**: organized into per-project subdirectories (`weights/ours`, `weights/AAA`); weights produced during training are also stored in the corresponding subdirectory.
 - **`data/datasets/shared_datasets`**: a symlink pointing to shared datasets. Downloading / using is allowed, but existing files must not be modified or deleted; if unavoidable, confirm first and back up.
