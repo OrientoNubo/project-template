@@ -27,7 +27,6 @@ project_root/
 ├── scripts/         # 運行／測試腳本（須創建對應的子文件夾分類）
 ├── configs/         # YAML／JSON 設定檔
 ├── src/             # 本項目核心 codebase（核心開發位置）
-│   ├── _shared/     # 跨版本共用：data loader／metrics／utils
 │   ├── v1_baseline/ # 開發版本（命名 vN_<簡述>），各版自帶 CHANGELOG.md／TODO.md
 │   │   ├── CHANGELOG.md  # 本版本更新日志（創建新版本時從項目遷移記錄開始）
 │   │   └── TODO.md       # 本版本待辦（創建新版本時從零開始）
@@ -54,7 +53,7 @@ project_root/
 - **`data/datasets/shared_datasets`**：symlink 指向共享 datasets。可下載／使用，但不得修改或刪除既有檔案；如必須，先確認並備份。
 - **`_tmp/`**：本項目所有臨時文件放這裏，禁止放到系統根目錄的 `/tmp`。
 - **`_bak/`**：備份壓縮包（權重、二進制大檔、整個項目快照等）存放處。
-- **`CHANGELOG.md` / `TODO.md`（兩層級）**：根目錄為**項目層級**（跨版本、結構／共用碼／基礎建設變更）；`src/<version>/` 各自有**版本層級**的 `CHANGELOG.md`／`TODO.md`，只記該版本自身的開發。格式統一 — CHANGELOG 時間戳分層（`## 2026-05-23-17:23:57`）按時間降序；TODO 用 `[ ]` 排列並記時間戳。
+- **`CHANGELOG.md` / `TODO.md`（兩層級）**：根目錄為**項目層級**（跨版本、結構／基礎建設變更）；`src/<version>/` 各自有**版本層級**的 `CHANGELOG.md`／`TODO.md`，只記該版本自身的開發。格式統一 — CHANGELOG 時間戳分層（`## 2026-05-23-17:23:57`）按時間降序；TODO 用 `[ ]` 排列並記時間戳。
 
 ## Git 管理規範
 
