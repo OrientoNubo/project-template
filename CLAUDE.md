@@ -48,7 +48,7 @@ project_root/
 
 ## 重要規則
 
-- **`src/` 多版本共存**：各開發版本用子目錄 `vN_<簡述>`（如 `v1_baseline`、`v2_crossattn`），不互相覆蓋；共用碼放 `src/_shared/` 並 import，只 fork 真正會變的部分。同一 version key 串起相關產物：`weights/ours/<version>/`、`configs/<version>.yaml`、`docs/reports/<version>.md`。當前激活版本由 `src/current` symlink 指定（見上節）。
+- **`src/` 多版本共存**：各開發版本用子目錄 `vN_<簡述>`（如 `v1_baseline`、`v2_crossattn`），不互相覆蓋；各版本彼此隔離、獨立運作。同一 version key 串起相關產物：`weights/ours/<version>/`、`configs/<version>.yaml`、`docs/reports/<version>.md`。當前激活版本由 `src/current` symlink 指定（見上節）。
 - **`repos/`**：邏輯上 read-only。允許為「成功運行」調整路徑／環境／依賴，但不得修改其運行邏輯與方法架構；如必須修改，先確認並備份。每個外部項目用一個子文件夾（`repos/AAA`）。
 - **`weights/`**：按項目名分子目錄（`weights/ours`、`weights/AAA`）；訓練過程權重也存於對應子目錄。
 - **`data/datasets/shared_datasets`**：symlink 指向共享 datasets。可下載／使用，但不得修改或刪除既有檔案；如必須，先確認並備份。
