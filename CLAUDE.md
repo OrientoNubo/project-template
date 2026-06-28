@@ -27,7 +27,6 @@ project_root/
 ├── scripts/         # Run / test scripts (create subdirectories for classification)
 ├── configs/         # YAML / JSON config files
 ├── src/             # This project's core codebase (main development location)
-│   ├── _shared/     # Cross-version shared: data loader / metrics / utils
 │   ├── v1_baseline/ # Development version (named vN_<brief>); each carries its own CHANGELOG.md / TODO.md
 │   │   ├── CHANGELOG.md  # This version's changelog (start from migrated records when creating a new version)
 │   │   └── TODO.md       # This version's TODO (start from scratch when creating a new version)
@@ -54,7 +53,7 @@ project_root/
 - **`data/datasets/shared_datasets`**: a symlink pointing to shared datasets. Downloading / using is allowed, but existing files must not be modified or deleted; if unavoidable, confirm first and back up.
 - **`_tmp/`**: all of this project's temporary files go here; do not place them in the system root `/tmp`.
 - **`_bak/`**: location for backup archives (weights, large binaries, full-project snapshots, etc.).
-- **`CHANGELOG.md` / `TODO.md` (two levels)**: the root level is **project-level** (cross-version, structure / shared-code / infrastructure changes); each `src/<version>/` has its own **version-level** `CHANGELOG.md` / `TODO.md` recording only that version's development. Unified format — CHANGELOG uses timestamp headers (`## 2026-05-23-17:23:57`) in descending order; TODO uses `[ ]` items with timestamps.
+- **`CHANGELOG.md` / `TODO.md` (two levels)**: the root level is **project-level** (cross-version, structure / infrastructure changes); each `src/<version>/` has its own **version-level** `CHANGELOG.md` / `TODO.md` recording only that version's development. Unified format — CHANGELOG uses timestamp headers (`## 2026-05-23-17:23:57`) in descending order; TODO uses `[ ]` items with timestamps.
 
 ## Git Management Rules
 
